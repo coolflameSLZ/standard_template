@@ -1,13 +1,18 @@
 package com.cmpy.group.common.api;
 
+import cn.hutool.core.collection.CollUtil;
+import cn.hutool.core.map.MapUtil;
 import com.fasterxml.jackson.annotation.JsonAlias;
+import com.google.common.collect.Collections2;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.util.Collection;
 
 import static com.cmpy.group.common.api.CommonResultEnum.SUCCESS;
+import static java.util.Collections.EMPTY_MAP;
 
 @Data
 @NoArgsConstructor
@@ -20,7 +25,7 @@ public class CommonResponse<T> implements Serializable {
     @JsonAlias({"msg", "message"})
     private String msg = SUCCESS.msg;
     @JsonAlias({"result", "output", "data"})
-    private T result;
+    private T result = (T) EMPTY_MAP;
 
 
     // 成功

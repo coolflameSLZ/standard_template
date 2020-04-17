@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>standard_template</artifactId>
+        <groupId>com.cmpy.group</groupId>
+        <version>0.0.1</version>
+    </parent>
+
+    <artifactId>example_api</artifactId>
+    <version>${com.cmpy.group.example.version}</version>
+
+
+    <dependencies>
+
+
+        <!--公共代码-->
+        <dependency>
+            <groupId>com.cmpy.group</groupId>
+            <artifactId>common_lib</artifactId>
+            <version>${com.cmpy.group.common-lib.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>

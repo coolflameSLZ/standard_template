@@ -9,6 +9,8 @@
     <version>0.0.1</version>
     <modules>
         <module>common_lib</module>
+        <module>example_api</module>
+        <module>example_svr</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -23,8 +25,9 @@
         <spring.cloud.version>Greenwich.RELEASE</spring.cloud.version>
 
         <!-- 项目内公共代码 -->
-        <com.cmpy.group.common-lib.version>0.0.1</com.cmpy.group.common-lib.version>
+        <com.cmpy.group.example.version>0.0.1</com.cmpy.group.example.version>
 
+        <com.cmpy.group.common-lib.version>0.0.1</com.cmpy.group.common-lib.version>
     </properties>
 
 
@@ -102,7 +105,6 @@
                 <version>29.0-jre</version>
             </dependency>
 
-
         </dependencies>
 
     </dependencyManagement>
@@ -152,6 +154,13 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
+        </dependency>
+
+        <!--h2数据库-->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>test</scope>
         </dependency>
 
     </dependencies>

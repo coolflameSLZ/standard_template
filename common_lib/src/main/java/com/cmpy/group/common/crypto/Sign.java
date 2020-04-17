@@ -4,6 +4,7 @@ import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
+import com.cmpy.group.common.api.CommonResultEnum;
 import com.cmpy.group.common.error.ServiceException;
 import org.springframework.util.StringUtils;
 
@@ -72,7 +73,7 @@ public class Sign {
 
     public static String generateSessionToken(String userId, String signingToken, boolean support, long duration) {
         if (StringUtils.isEmpty(signingToken)) {
-            throw new ServiceException("No signing token present");
+            throw new ServiceException(CommonResultEnum.UN_AUTHORIZED);
         }
         Algorithm algorithm = getAlgorithm(signingToken);
         String token = JWT.create()
